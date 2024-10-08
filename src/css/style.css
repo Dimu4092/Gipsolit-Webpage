@@ -1,0 +1,996 @@
+/*Font family*/
+@font-face {
+  font-family: 'OpenSans_reg';
+  src: url('../fonts/OpenSans-Regular.eot');
+  src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Regular.woff2') format('woff2'), url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans_bold';
+  src: url('../fonts/OpenSans-Bold.eot');
+  src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Bold.woff2') format('woff2'), url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf') format('truetype'), url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+/*Базові кольори створюємо змінні з кольорами*/
+/*колір жовтої кнопки*/
+/*зелений колір іконок*/
+/*колір тексту*/
+/*колір червоних хрестиків*/
+/*світлий фон блоку все включено*/
+/*білий фон*/
+/*Базові налаштування, тіла документа, кнопок, обводок*/
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+/*Задаю стиль тексту біля логотипу*/
+.logotext {
+  text-transform: uppercase;
+  margin-left: 1.5rem;
+  padding: 13px 0;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  font-family: 'OpenSans_Reg', sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+button:focus,
+input:focus,
+a:focus,
+textarea:focus {
+  outline: none;
+}
+.button {
+  background-color: #fcb303;
+  color: #ffffff;
+  /*колір тексту кнопки білий*/
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  /*внутрішні відступи тексту в кнопці*/
+  border-radius: 8px;
+  /*заокруглення країв кнопки*/
+  text-transform: uppercase;
+  /*всі букви з великої*/
+  border: none;
+  /*забирає, фон рамку по периметру кнопки*/
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  /*означає перехід, буде ефект освітлення кнопки при наведенні*/
+}
+.button:hover {
+  cursor: pointer;
+  /*замість стрілочки вказівник поміняється на пальчик*/
+  background-color: #d99a03;
+  /*зробити світліше(lighten)або темніше ніж бтн-колор на 10%*/
+}
+/*Оформлення форм*/
+.form {
+  /*Поле для вводу*/
+  /*Підписи до полів*/
+  /*кнопка відправити заявку*/
+}
+.form-input,
+.form-textarea {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  border: 1px solid #dddddd;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+.form label {
+  position: absolute;
+  /*витягнули їх з потоку, інші лейбли не звертають на них увагу*/
+  display: inline-block;
+  left: 50%;
+  padding: 0.5rem;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  font-family: 'OpenSans_Reg', sans-serif;
+}
+.form-btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 1.2rem;
+  height: 5.5rem;
+}
+/*Типографія*/
+section {
+  padding: 10rem 0;
+  /*у кожгого розділу буде  відступ зверху і знизу 10rem, по краям 0. (1rem=10px)*/
+}
+.section-header {
+  margin: 2rem 0 10rem;
+  text-align: center;
+}
+.section-header_light {
+  color: #ffffff;
+  margin-top: 0;
+}
+.section-header h2 {
+  font-family: 'OpenSans_bold', sans-serif;
+  font-size: 3.6rem;
+}
+.section-header p {
+  font-size: 1.4rem;
+}
+/*MAIN*/
+.main {
+  padding: 1rem 0 5rem;
+  background: #ffffff url(../img/main_bg.jpg) center center no-repeat;
+  background-position: 50% 60%;
+  background-size: 50%;
+  /*підзаголовок*/
+  /*зелений ярлик*/
+  /*оплата по факту*/
+  /*головна форма*/
+}
+.main-content {
+  margin-top: 5rem;
+  /*Головний заголовок*/
+}
+.main-content h1 {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  font-family: 'OpenSans_bold', sans-serif;
+  font-size: 2.3rem;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+.main-subtitle {
+  margin-bottom: 4rem;
+  font-size: 1.9rem;
+}
+.main span {
+  display: inline-block;
+  padding: 3rem 5rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  text-align: center;
+  background-color: #46b814;
+  /*цифра 150грн*/
+}
+.main span strong {
+  font-size: 2rem;
+  font-family: 'OpenSans_bold', sans-serif;
+}
+.main-trigger {
+  margin-top: 3rem;
+  display: block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'OpenSans_bold', sans-serif;
+}
+.main-form,
+.main-contacts {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 0 1rem;
+  /*заголовок форми*/
+  /*підпис під кнопкою залишити заявкy*/
+}
+.main-form-header,
+.main-contacts-header {
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+}
+.main-form-header strong,
+.main-contacts-header strong {
+  font-size: 1.9rem;
+}
+.main-form small,
+.main-contacts small {
+  display: block;
+  margin-top: 1.5rem;
+}
+.header {
+  height: 7rem;
+}
+/*автоматичне вирівнювання по цетру костилі для кнопки*/
+.wrap {
+  /*автоматичне вирівнювання по цетру костилі для кнопки*/
+  display: table;
+  width: 100%;
+  /*ширина 100% від батьківського блоку, тобто від колонки, займає всі 3 колонки*/
+  height: 7rem;
+  /*по висоті 7рем*/
+}
+.wrap-block {
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+}
+.phone-link {
+  display: inline-block;
+  /*Для того щоб можна було задати розміри і відступи*/
+  font-family: 'OpenSans_bold', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  height: 7rem;
+  line-height: 7rem;
+  color: #1a1820;
+}
+/*оформляємо слік-слайдер*/
+.features {
+  padding: 0;
+  text-align: center;
+}
+.features .section-header {
+  padding: 0;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  font-weight: 700;
+}
+.features-block {
+  text-align: center;
+}
+.features-block h3 {
+  font-family: 'OpenSans_bold', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.features-block p {
+  display: inline-block;
+  width: 80%;
+  font-size: 1.4rem;
+}
+.features-img img {
+  display: block;
+  margin: 0 auto;
+}
+/*забираєм обводку голубу у слайдів*/
+.slick-active {
+  outline: none;
+}
+.arrow {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  z-index: 99;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  -webkit-box-sizing: 100%;
+          box-sizing: 100%;
+}
+.prev {
+  background: url(../img/features/arrow/left.png) center no-repeat;
+  left: 0;
+}
+.next {
+  background: url(../img/features/arrow/right.png) center no-repeat;
+  right: 0;
+}
+/*Секція з цінами*/
+.price {
+  background: #006800;
+  /*зелений колір фону цін*/
+  /*Карточки з тарифами*/
+}
+.price-header-btn {
+  margin-top: 2.5rem;
+}
+.price-button {
+  text-align: right;
+}
+.price-block {
+  min-height: 58rem;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+          box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+  text-align: center;
+  /*.price-jpg{width:100%;}*/
+}
+.price-block h4 {
+  margin: 3rem 0;
+  font-size: 1.9rem;
+  font-family: 'OpenSans_bold', sans-serif;
+}
+.price-block img {
+  width: 100%;
+  max-width: 30rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+.price-tag {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 1.9rem;
+  font-family: 'OpenSans_bold', sans-serif;
+}
+.price-list {
+  padding: 0;
+  list-style: none;
+  min-height: 14rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  /*Задаємо стиль щоб появилася зелена галочка*/
+}
+.price-list li:before {
+  content: '';
+  margin-right: 1rem;
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(../img/prices/tick.svg) no-repeat center;
+  background-size: 60%;
+  vertical-align: middle;
+}
+/*Секція з відгуками*/
+.feedback {
+  position: relative;
+  background: #EDEDED;
+  /*форма зворотнього зв'язку*/
+}
+.feedback-prev-btn {
+  left: -4rem;
+}
+.feedback-text {
+  position: relative;
+  /*загогулінки не буде доки батьківський елемент не релейтів*/
+  margin-top: 2rem;
+  border: 2px solid #46b814;
+  padding: 1rem;
+  font-style: italic;
+  /*робим ту загагулінку*/
+}
+.feedback-text::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2rem;
+  width: 2rem;
+  height: 2rem;
+  left: 4rem;
+  border: 2px solid #46b814;
+  background-color: #ffffff;
+  border-bottom: none;
+  border-top-right-radius: 100px;
+}
+.feedback-next-btn {
+  right: -4rem;
+}
+.feedback-slider {
+  padding: 5rem 6rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.11);
+          box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.11);
+}
+.feedback-slider .media {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+}
+.feedback-slider .media h4 {
+  font-family: 'OpenSans_bold', sans-serif;
+}
+.feedback-slider p {
+  font-size: 1.3rem;
+}
+.feedback-slider-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 4rem;
+  height: 5rem;
+  background-color: #46b814;
+  border: none;
+  border-radius: 3px;
+}
+.feedback-slider-btn img {
+  width: 80%;
+}
+.feedback-form {
+  margin-top: 5rem;
+  padding: 4rem 10rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+.feedback-form h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: 'OpenSans_bold', sans-serif;
+}
+.feedback-form label {
+  -webkit-transform: translate(-50%, 7px);
+          transform: translate(-50%, 7px);
+}
+.feedback-btn {
+  max-width: 30rem;
+  margin: auto;
+}
+.hand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 25%;
+}
+/*Схема роботи*/
+/*Scheme*/
+.scheme {
+  background: #ffffff url(../img/sheme/hand.png) bottom right 5rem no-repeat;
+  background-size: 45rem;
+}
+.scheme h2 {
+  font-family: 'OpenSans_bold', sans-serif;
+  margin-bottom: 5rem;
+}
+.scheme p {
+  margin: 20px 0 60px;
+}
+.scheme-header {
+  margin-bottom: ;
+}
+.scheme-block {
+  min-height: 30rem;
+}
+.scheme-block h3 {
+  font-size: 2rem;
+  font-family: 'OpenSans_bold', sans-serif;
+}
+/*All inclusive*/
+.all-inclusive {
+  background-color: #EDEDED;
+  /*щоб блоки не схлопувалися задаємо мін-хай*/
+}
+.all-inclusive .section-header h2 {
+  color: #46b814;
+  margin-bottom: 30px;
+}
+.all-inclusive .section-header p {
+  color: #333333;
+}
+.all-inclusive .media-block {
+  min-height: 9rem;
+}
+.all-inclusive .media-block h4 {
+  font-family: 'OpenSans_bold', sans-serif;
+  font-size: 1.6rem;
+}
+.all-inclusive .media-block p {
+  font-size: 1.1rem;
+}
+.circle {
+  display: inline-block;
+  background-color: #46b814;
+  /*зараз він прямокутна полосочка*/
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /*щоб став круглим*/
+}
+.circle-border {
+  /*мусимо позначити, що він строчно-блочний елемент*/
+  display: inline-block;
+  padding: 0.3rem;
+  /*додами внутрішні відступи*/
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #46b814;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4rem;
+  /*щоб текст вирівнявся по-центру*/
+  color: #ffffff;
+  font-family: 'OpenSans_bold', sans-serif;
+  font-size: 1.9rem;
+}
+/*section problems сумніви*/
+.problems {
+  /*щоб по середині між блоками було зображення, батьківському елементу задаємо position relative */
+  position: relative;
+  padding: 50px 0 100px 0;
+}
+.problems-woman {
+  position: absolute;
+  width: 30rem;
+  bottom: 0;
+  left: 50%;
+  margin-left: -19rem;
+}
+.problems-list {
+  border: 4px solid;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  /*щоб була одинакова висота*/
+  min-height: 36rem;
+}
+.problems-list h4 {
+  font-size: 2.1rem;
+  font-family: 'OpenSans_bold', sans-serif;
+}
+.problems-list ul {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 2rem;
+}
+.problems-list ul li {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 3.5rem;
+}
+.problems-list ul li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+}
+.problems-list-bad {
+  border-color: #e8e8e8;
+}
+.problems-list-bad h4 {
+  margin: 10px 0 25px 0;
+  opacity: 0.5;
+}
+.problems-list-bad ul li:before {
+  background: url(../img/problems/red.png) center no-repeat;
+  /*зображення краще завантажувати в svg, буде нормально масштабуватися*/
+  background-size: 90%;
+}
+.problems-list-good {
+  border-color: #46b814;
+}
+.problems-list-good ul li:before {
+  background: url(../img/problems/green.png) center no-repeat;
+  /*зображення краще завантажувати в svg, буде нормально масштабуватися*/
+  background-size: 100%;
+}
+/*Матеріали*/
+.materials {
+  background: #EDEDED;
+  padding-bottom: 0;
+}
+.materials-slider {
+  padding-top: 5rem;
+}
+.materials-link {
+  color: #46b814;
+  /*крапки при наведенні*/
+  border-bottom: 1px dashed #46b814;
+  /*щоб колір силки не мінявся на синій*/
+}
+.materials-link:hover {
+  color: #348a0f;
+}
+.materials-offer {
+  margin-top: 4rem;
+}
+.materials img {
+  display: block;
+  margin: 0 auto;
+}
+/*подивіться, як ми працюємо*/
+.tour {
+  background: #ffffff url(../img/excursion/excursion.png) center no-repeat;
+  background-position: 55% 50%;
+  background-size: 50%;
+  padding-top: 2rem;
+  padding-bottom: 10rem ;
+}
+.tour-subtitle {
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+.tour-form {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 0 1rem;
+  /*заголовок форми*/
+  /*підпис під кнопкою залишити заявкy*/
+}
+.tour-form-header {
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+}
+.tour-form-header strong {
+  font-size: 1.9rem;
+}
+.tour-form small {
+  display: block;
+  margin-top: 1.5rem;
+}
+/*додаткові послуги*/
+.upsell {
+  background: #006800;
+}
+.upsell-block {
+  min-height: 30rem;
+  text-align: center;
+  color: #ffffff;
+}
+.upsell-blocks {
+  margin-top: 3rem;
+}
+.upsell-block img {
+  display: inline-block;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 30rem;
+}
+.upsell-block p {
+  font-size: 2rem;
+}
+/*секція контакти*/
+.contacts {
+  background: #ffffff url(../img/contacts/contacts-bg.jpg) center bottom no-repeat;
+  background-size: cover;
+  /*Заголовок форми*/
+}
+.contacts h2 {
+  font-family: 'OpenSans_bold', sans-serif;
+}
+.contacts p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.contacts-link {
+  display: inline-block;
+  color: #1a1820;
+  border-bottom: 1px dotted #1a1820;
+}
+.contacts-link:hover {
+  color: #020203;
+}
+.contacts .contacts-form {
+  padding: 2rem 2rem 2rem 2rem;
+}
+.contacts .contacts-form h2 {
+  font-size: 1.9rem;
+  font-family: 'OpenSans_bold', sans-serif;
+  margin-bottom: 3rem;
+}
+/*Оформляємо рідвал*/
+footer {
+  padding: 4rem 0;
+}
+footer .dev-logo {
+  text-align: center;
+}
+footer .logo {
+  text-align: center;
+}
+footer .logotext {
+  text-align: center;
+}
+.footer-contacts {
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.footer-contacts p {
+  margin: 0;
+}
+/*Оформлення модальних вікон*/
+/*затемнення модального вікна фон*/
+.popup {
+  display: none;
+  /*модальне вікно спочатку треба сховати*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  /*вказуємо місце де вікно має появитися*/
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+  /*сам контен модального вікна*/
+  /*оформлення кнопочки закриття модального вікна*/
+}
+.popup-content {
+  position: fixed;
+  text-align: center;
+  left: 50%;
+  top: 7%;
+  background-color: #ffffff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 4rem 6rem;
+  width: 35rem;
+  margin: 0;
+}
+.popup-form {
+  /*забираємо відступи всередині форми*/
+  margin-top: 2rem;
+  padding: 0;
+}
+.popup-close {
+  position: absolute;
+  top: 2rem;
+  right: 6rem;
+  width: 2rem;
+  text-align: center;
+  border: none;
+  font-size: 1.5rem;
+  background-color: #fcb303;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  /*означає перехід, буде ефект освітлення кнопки при наведенні*/
+}
+.popup-close:hover {
+  cursor: pointer;
+  /*замість стрілочки вказівник поміняється на пальчик*/
+  background-color: #d99a03;
+  /*зробити світліше(lighten)або темніше ніж бтн-колор на 10%*/
+}
+.popup-content {
+  text-align: center;
+}
+.popup-header {
+  font-family: 'OpenSans_bold', sans-serif;
+}
+@media (max-width: 1199px) {
+  .feedback-form {
+    padding: 3rem 5rem;
+  }
+  .feedback .fotorama {
+    margin-bottom: 3rem;
+  }
+  .all-inclusive {
+    background-color: #EDEDED;
+    /*щоб блоки не схлопувалися задаємо мін-хай*/
+  }
+  .all-inclusive .section-header h2 {
+    color: #46b814;
+    margin-bottom: 30px;
+  }
+  .all-inclusive .section-header p {
+    color: #333333;
+  }
+  .all-inclusive .media-block {
+    min-height: 10rem;
+  }
+  .problems-list {
+    min-height: 40rem;
+  }
+  .problems-list li {
+    margin-bottom: 2rem;
+  }
+  .materials-link {
+    display: inline-block;
+    margin: 1rem;
+  }
+}
+/*це правило буде працювати лише для моніторів шириною менше 991px*/
+@media (max-width: 991px) {
+  .main {
+    background: #ffffff url(../img/main_bg.jpg) center center no-repeat;
+    background-size: 85%;
+    background-position: 50% 45%;
+  }
+  .main-content {
+    margin-top: 3rem;
+  }
+  .main-title {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .main-subtitle {
+    margin-top: 1rem;
+    margin-bottom: 19rem;
+    font-size: 3rem;
+  }
+  .txt-btn {
+    margin-top: 0;
+    margin-bottom: 10rem;
+  }
+  .main-trigger {
+    margin-top: 3rem;
+  }
+  .price {
+    /*Щоб зробити розрив між блоками*/
+  }
+  .price-button {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .price-header-btn {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .price-block {
+    margin-top: 2rem;
+  }
+  .price-header {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .section-header_light {
+    margin-bottom: 0;
+  }
+  .feedback-form label {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .problems-woman {
+    display: none;
+  }
+  .problems-list {
+    min-height: auto;
+  }
+  .materials-link {
+    display: inline-block;
+    margin-top: 3rem;
+  }
+  /*tour sm-display*/
+  .tour {
+    background: #ffffff url(../img/excursion/excursion.png) center no-repeat;
+    background-position: 55% 50%;
+    background-size: 60%;
+    padding-top: 2rem;
+    padding-bottom: 5rem ;
+  }
+  .tour-subtitle {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin: 5rem 0 5rem 0;
+  }
+  .tour-second {
+    margin-bottom: 15rem;
+  }
+  .tour-form {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    /*заголовок форми*/
+    /*підпис під кнопкою залишити заявкy*/
+  }
+  .tour-form-header {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+  }
+  .tour-form-header strong {
+    font-size: 1.9rem;
+  }
+  .tour-form small {
+    display: block;
+    margin-top: 1.5rem;
+  }
+  /*contacts*/
+  .contacts {
+    background: none;
+    background-color: #fff;
+  }
+  .contacts-form {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .main {
+    background: #ffffff url(../img/main_bg.jpg) center center no-repeat;
+    background-size: 100%;
+    background-position: 50% 55% ;
+    text-align: center;
+  }
+  .main h1 {
+    font-size: 2.5rem;
+  }
+  .main-title {
+    text-align: center;
+  }
+  .main-subtitle {
+    margin: 2rem;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px 2px #1a1820, 0 0 2rem #46b814;
+  }
+  .header {
+    text-align: center;
+  }
+  .wrap-block {
+    text-align: center;
+  }
+  .button .popup-btn .header-btn {
+    background-color: #fcb303;
+    color: #ffffff;
+    /*колір тексту кнопки білий*/
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    /*внутрішні відступи тексту в кнопці*/
+    border-radius: 8px;
+    /*заокруглення країв кнопки*/
+    text-transform: uppercase;
+    /*всі букви з великої*/
+    border: none;
+    /*забирає, фон рамку по периметру кнопки*/
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    /*означає перехід, буде ефект освітлення кнопки при наведенні*/
+  }
+  .button .popup-btn .header-btn:hover {
+    cursor: pointer;
+    /*замість стрілочки вказівник поміняється на пальчик*/
+    background-color: #d99a03;
+    /*зробити світліше(lighten)або темніше ніж бтн-колор на 10%*/
+  }
+  .main-trigger {
+    color: #fff;
+    text-shadow: 1px 1px 2px #1a1820, 0 0 2rem #46b814;
+  }
+  .features-block p {
+    width: 60%;
+  }
+  .feedback-prev-btn {
+    left: 0;
+  }
+  .feedback-next-btn {
+    right: 0;
+  }
+  .scheme {
+    background: none;
+    text-align: center;
+  }
+  .scheme-block {
+    min-height: auto ;
+  }
+  .problems-list {
+    min-height: auto;
+  }
+  .problems-woman {
+    display: none;
+  }
+  .materials-link {
+    display: block;
+    margin: 1rem;
+    border-bottom: none;
+  }
+  /*tour-xs*/
+  .tour {
+    background: #ffffff url(../img/excursion/excursion.png) center no-repeat;
+    background-position: 55% 50%;
+    background-size: 60%;
+    padding-top: 2rem;
+    padding-bottom: 5rem ;
+  }
+  .tour-subtitle {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin: 5rem 0 5rem 0;
+  }
+  .tour-second {
+    margin-bottom: 15rem;
+    font-weight: 700;
+  }
+  .tour .for-xs-disp {
+    color: #000;
+    text-shadow: none;
+  }
+  .tour-form {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    /*заголовок форми*/
+    /*підпис під кнопкою залишити заявкy*/
+  }
+  .tour-form-header {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+  }
+  .tour-form-header strong {
+    font-size: 1.9rem;
+  }
+  .tour-form small {
+    display: block;
+    margin-top: 1.5rem;
+  }
+}
